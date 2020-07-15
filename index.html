@@ -1,211 +1,103 @@
 <html>
-<head>
-    <link rel="stylesheet" href="style.css"/>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.4/paper-full.min.js"></script>
-    <script type="text/paperscript" canvas="myCanvas">
-        dataLine = 'M1738.1542969,498.3333435c0,0-496.99646-0.6469421-504.1593018-0.6191711c-10.6481934,0.0412903-25.6884766,1.5736084-34.6477051,8.9387512c-13.0223389,10.7053528-35.5025635,33.8074646-62.34729,29.0137634C1094.0878906,528.0037842,1068.333374,492,1039,488c-21.394165-2.9173889-36.4987183,27.0018921-64.9987183,23.0018921c-8.6956177-1.2204285-18.4875488-12.5499268-18.4875488-20.7494507c0,0,0-54.3815308,0-63.7524414s3.9862671-33-40.1485596-45.1923218c-13.5945435-3.7554932-22.2444458-6.0306702-27.6784058-7.369873l-19.8201294-3.7012024c-15.6337891-5.0424194-26.9435425-19.7121887-26.9435425-37.0235291c0-21.4804993,17.4133911-38.8938904,38.8938599-38.8938904c21.4805298,0,38.8939209,17.4133911,38.8939209,38.8938904c0,17.0596008-10.9832764,31.5539246-26.2643433,36.7974854l-19.1337891,4.5723877l-24.8618164,5.8883057c0,0-44.382019,5.855011-44.382019,47.6763916s0,74.4421082,0,74.4421082c0,7.527832,2.0910645,14.6374817,11.710022,14.6374817c11.291748,0,10.2210693-14.6390686,10.2210693-14.6390686S826,433.250061,826,426s4.0840454-39.6538086-47.5651855-52.0608215c-15.8267212-3.8018494-25.5912476-6.1058655-31.5228271-7.4729919l-19.1774292-3.774231c-18.1003418-4.8301086-31.3851318-20.7794495-31.3851318-39.7101746c0-22.7590942,19.2012939-41.2090149,42.8872681-41.2090149c23.6860352,0,42.8873291,18.4499207,42.8873291,41.2090149c0,18.5445557-12.748291,34.2281189-30.2835693,39.4007568l-20.3797607,4.5690308l-26.8105469,6.1013794c0,0-52.5715332,6.2035217-52.5715332,50.5142822s0,78.8731384,0,78.8731384c0,4.0328064,1.4846191,13.9504395,12.3581543,13.9504395c11.710022,0,10.4553833-13.8010559,10.4553833-13.8010559s0-32.620697,0-74.4421082s-47.6763916-47.6763916-47.6763916-47.6763916S609.75,375.625,602.390686,374.5916443c-6.7255249-0.9443665-19.3676147-4.6493225-19.3676147-4.6493225c-15.1783447-5.3001404-26.0672607-19.7430725-26.0672607-36.729248c0-21.4804993,17.4133911-38.8938904,38.8938599-38.8938904c21.4805298,0,38.8939209,17.4133911,38.8939209,38.8938904c0,17.3662415-11.3816528,32.0741272-27.0924072,37.0711975c0,0-16.182373,3.2982483-21.3543091,4.0694885c-5.171875,0.7712402-13.7263794,3.5627441-25.9953613,6.9539185C518,393,520.1529541,419.8709106,520.1529541,431.5s0,58.7524414,0,58.7524414C520.1529541,498.4519653,518.5,507.5,507,512c-11.1921387,4.3795166-18.6666565,2.333313-43.3333435-15.6666565c-24.6666565-18-44.6666565,9.333313-68,9.333313C380.9093628,505.6666565,361,491,331,458.3333435C285.985321,409.3173523,245.6666718,453,213.6666718,509c-32.8435822,57.4762573-87.5412064,98.2023315-143.3333435,40.666687C27.666666,505.6666565,12.333333,473-6.0037794,471c-8.4160776-0.9179382-17.331665-1.4216003-23.967865-1.6938477C-36.1385918,469.0531311-260.475708,469-260.475708,469';
-        theTieWrap = 'M733.9572144,383.8169861h8.0170288c1.4992065,0,2.9369507,0.59552,3.9970093,1.6556091l0.6568604,0.6568604	c1.6343994,1.6343689,2.1090698,4.0991516,1.1985474,6.2236633l-2.6700439,6.2302246c-0.8907471,2.0783691-2.9343872,3.4259338-5.1956177,3.4259338h-4.4608765c-2.1323853,0-4.083252-1.1999817-5.0450439-3.1031189l-2.7458496-5.4336853c-1.0238647-2.0260925-0.7340088-4.4653931,0.7299194-6.2004395c0.3881226-0.4599915,0.7784424-0.9299011,1.1339111-1.3701782C730.6414795,384.5783081,732.2561646,383.8169861,733.9572144,383.8169861z';
-        theTie = 'M744.3279419,412.4109192l6.5053711,60.3220825c0.0822144,0.7622681-0.1556396,1.5244446-0.6567383,2.1046753l-9.1882935,10.6390686c-1.0505371,1.2164001-2.9130859,1.2844543-4.0495605,0.1479492l-10.7720947-10.7720947c-0.5853882-0.5853271-0.8778076-1.4020691-0.7970581-2.2259216l5.9009399-60.1890869c0.138855-1.4164124,1.3297729-2.4963074,2.7529907-2.4963074h7.5541992	C742.9906616,409.9412842,744.1764526,411.0061035,744.3279419,412.4109192z';
-        var primaryColor            = '#cf034a';
-        var secondaryColor          = '#231f20';
-        
-        var theTieWrapPath          = new Path(theTieWrap); 
-        
-        
-        var theTiePath              = new Path(theTie); 
-        //linePath.fullySelected    = true;
-        
-        //initialise the line
-        var linePathOriginal        = new Path(dataLine); 
-        var linePathWave            = new Path(dataLine); 
-        var linePathRender          = new Path(dataLine); 
-        
-        //Enhance the line
-        linePathRender.strokeColor  = secondaryColor;
-        
-        //linePathRender.fullySelected = true;
-        
-        var amount                  = linePathOriginal.segments.length ; 
-        var center                  = view.center; 
-        
-        function lerp(a, b, t){
-            return a + t * (b - a);
-        }
-        
-        
-        function onFrame(event) {
-            // Loop through the segments of the path:
-            for (var i = 0; i <= amount; i++) {
-                var toManipulate  = linePathWave.segments[i];
-                var segment       = linePathOriginal.segments[i];
-                var nextSegment   = linePathOriginal.segments[i+1];
-        
-                if(!nextSegment) continue;
-                var deltaX        = nextSegment.point.x - segment.point.x;
-                var deltaY        = nextSegment.point.y - segment.point.y;
-                var length        = Math.sqrt( deltaX * deltaX + deltaY * deltaY );
-                var normal        = [ deltaX / length, -deltaY / length ];
-                var sinus         = Math.sin(event.time * 4 + i); // Note: change wave speed with 3;
-        
-                
-                toManipulate.point.x = segment.point.x + normal[0] * sinus * 1.3; 
-                toManipulate.point.y = segment.point.y + normal[1] * sinus * 1.3; 
-                
-                linePathRender.segments[i].point.x = lerp(linePathRender.segments[i].point.x, linePathWave.segments[i].point.x, 0.2 );
-                linePathRender.segments[i].point.y = lerp(linePathRender.segments[i].point.y, linePathWave.segments[i].point.y, 0.2 );
-            }
-        }
-        
-        window.addEventListener("resize", myFunction);
-        
-        myFunction();
-        
-        
-        function myFunction() {    
-            var size    = [view.size.width, view.size.height];
-            var bgColor = new Path.Rectangle(new Point(0, 0), size);
-            bgColor.sendToBack();
-            bgColor.fillColor = primaryColor;    
-            redrawCanvas();
-        }
-        
-        function redrawCanvas(){    
-            
-            var linePropWidth = view.bounds.width, 
-                lineProHeight = linePropWidth / 6.5; 
-            
-            
-            linePathRender.strokeWidth = lineProHeight/40;
-            
-            // Grouping tie elements
-            var tieGroup = new Group({
-                children: [theTieWrapPath, theTiePath],
-                
-                fillColor : secondaryColor
-            });
-            
-            
-            var allFigure = new Group({
-                children: [theTieWrapPath, theTiePath,linePathRender,linePathOriginal,linePathWave],
-                
-                position: [ view.center.x + 65, view.center.y + 110 ]
-            });
-            
-            
-            allFigure.fitBounds(view.bounds);
-        }
-        
-        </script>
-        <script type="text/paperscript" canvas="quad">
-            var aCircle = new Path.Circle(new Point(75, 75), 60);
-            aCircle.strokeColor = 'black';
-            
-            var aRectangle = new Path.Rectangle(new Point(200, 15), new Point(400, 135));
-            aRectangle.strokeColor = 'orange';
-            
-            var bRectangle = new Path.Rectangle(new Point(80, 215), new Size(400, 135));
-            bRectangle.strokeColor = 'blue';
-            
-            var myRectangle = new Rectangle(new Point(450, 30), new Point(720, 170));
-            var cornerSize = new Size(10, 60);
-            var cRectangle = new Path.RoundRectangle(myRectangle, cornerSize);
-            cRectangle.fillColor = 'lightgreen';
-            
-            var aTriangle = new Path.RegularPolygon(new Point(120, 500), 3, 110);
-            aTriangle.fillColor = '#FFDDBB';
-            aTriangle.selected = true;
-          
-            var aDodecagon = new Path.RegularPolygon(new Point(460, 490), 12, 100);
-            aDodecagon.fillColor = '#CCAAFC';
-            aDodecagon.selected = true;
-          </script>
-        
-        <canvas id="myCanvas" resize></canvas>
-        <h3>
-            Play KeyBoard by pressing (A S D F G H J K L ;)<br> and (W E T Y U O P)
-        </h3>
-        <canvas class="squig" resize></canvas>
-        <section id="wrap">
-            <section id="main">
-              <div class="nowplaying"></div>
-              <div class="keys">
-                <canvas id="myCanvasK" data-key="65" class="key" data-note="C">
-                    <span class="hints">A</span>
-                </canvas>
-                <canvas id="myCanvasK" data-key="87" class="key sharp" data-note="C#">
-                    <span class="hints">W</span>
-                </canvas>
-                <canvas id="myCanvasK"  data-key="83" class="key" data-note="D">
-                    <span class="hints">S</span>
-                </canvas>
-                <canvas id="myCanvasK"  data-key="69" class="key sharp" data-note="D#">
-                    <span class="hints">E</span>
-                </canvas>
-                <canvas id="myCanvasK" data-key="68" class="key" data-note="E">
-                    <span class="hints">D</span>
-                </canvas>
-                <canvas id="myCanvasK"  data-key="70" class="key" data-note="F">
-                    <span class="hints">F</span>
-                </canvas>
-                <canvas id="myCanvasK"  data-key="84" class="key sharp" data-note="F#">
-                    <span class="hints">T</span>
-                </canvas>
-                <canvas id="myCanvasK"  data-key="71" class="key" data-note="G">
-                    <span class="hints">G</span>
-                </canvas>
-                <canvas  id="myCanvasK"  data-key="89" class="key sharp" data-note="G#">
-                    <span class="hints">Y</span>
-                </canvas>
-                <canvas id="myCanvasK" data-key="72" class="key" data-note="A">
-                    <span class="hints">H</span>
-                </canvas>
-                <canvas id="myCanvasK" data-key="85" class="key sharp" data-note="A#">
-                    <span class="hints">U</span>
-                </canvas>
-                <canvas id="myCanvasK" data-key="74" class="key" data-note="B">
-                    <span class="hints">J</span>
-                </canvas>
-                <canvas id="myCanvasK" data-key="75" class="key" data-note="C">
-                    <span class="hints">K</span>
-                </canvas>
-                <canvas id="myCanvasK" data-key="79" class="key sharp" data-note="C#">
-                    <span class="hints">O</span>
-                </canvas >
-                <canvas id="myCanvasK" data-key="76" class="key" data-note="D">
-                    <span class="hints">L</span>
-                </canvas>
-                <canvas id="myCanvasK" data-key="80" class="key sharp" data-note="D#">
-                    <span class="hints">P</span>
-                </canvas>
-                <canvas id="myCanvasK" data-key="186" class="key" data-note="E">
-                    <span class="hints">;</span>
-                </canvas>
-              </div>
-        
-              <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
-              <audio data-key="87" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
-              <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
-              <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
-              <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
-              <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
-              <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
-              <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
-              <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
-              <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
-              <audio data-key="85" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
-              <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
-              <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
-              <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
-              <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
-              <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
-              <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
-              </section>
-          </section>
-          
-<script src="main.js"></script>
+  <div class="container">
+    <h1 class="">Piano Player</h1>
+    <h3 class="">
+        Play KeyBoard by pressing (A S D F G H J K L ;)<br> and (W E T Y U O P)
+    </h3>
+    <canvas class="squig" resize></canvas>
+    <section id="wrap">
+      <section id="main">
+        <div class="nowplaying"></div>
+        <div class="keys">
+          <div class="container">
+            <canvas id="myCanvasK" data-key="65" class="key" data-note="C">
+              <span class="hints">A</span>
+            </canvas>
+            <canvas id="myCanvasK" data-key="87" class="key sharp" data-note="C#">
+                <span class="hints">W</span>
+            </canvas>
+            <canvas id="myCanvasK"  data-key="83" class="key" data-note="D">
+                <span class="hints">S</span>
+            </canvas>
+            <canvas id="myCanvasK"  data-key="69" class="key sharp" data-note="D#">
+                <span class="hints">E</span>
+            </canvas>
+            <canvas id="myCanvasK" data-key="68" class="key" data-note="E">
+                <span class="hints">D</span>
+            </canvas>
+            <canvas id="myCanvasK"  data-key="70" class="key" data-note="F">
+                <span class="hints">F</span>
+            </canvas>
+            <canvas id="myCanvasK"  data-key="84" class="key sharp" data-note="F#">
+                <span class="hints">T</span>
+            </canvas>
+            <canvas id="myCanvasK"  data-key="71" class="key" data-note="G">
+                <span class="hints">G</span>
+            </canvas>
+            <canvas  id="myCanvasK"  data-key="89" class="key sharp" data-note="G#">
+                <span class="hints">Y</span>
+            </canvas>
+            <canvas id="myCanvasK" data-key="72" class="key" data-note="A">
+                <span class="hints">H</span>
+            </canvas>
+            <canvas id="myCanvasK" data-key="85" class="key sharp" data-note="A#">
+                <span class="hints">U</span>
+            </canvas>
+            <canvas id="myCanvasK" data-key="74" class="key" data-note="B">
+                <span class="hints">J</span>
+            </canvas>
+            <canvas id="myCanvasK" data-key="75" class="key" data-note="C">
+                <span class="hints">K</span>
+            </canvas>
+            <canvas id="myCanvasK" data-key="79" class="key sharp" data-note="C#">
+                <span class="hints">O</span>
+            </canvas >
+            <canvas id="myCanvasK" data-key="76" class="key" data-note="D">
+                <span class="hints">L</span>
+            </canvas>
+            <canvas id="myCanvasK" data-key="80" class="key sharp" data-note="D#">
+                <span class="hints">P</span>
+            </canvas>
+            <canvas id="myCanvasK" data-key="186" class="key" data-note="E">
+                <span class="hints">;</span>
+            </canvas>
+          </div>
+        </div>
+        <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+        <audio data-key="87" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+        <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+        <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+        <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+        <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+        <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+        <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+        <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+        <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+        <audio data-key="85" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+        <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+        <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
+        <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+        <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
+        <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+        <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
+      </section>
+    </section>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.4/paper-full.min.js"></script>
+  <script src="src/main.js"></script>
 </body>
+
 </html>

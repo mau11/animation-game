@@ -82,14 +82,10 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
-
 /* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -158,51 +154,32 @@ canvas {
   height: 50%
 }
 
-
-
 h3{
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-radial-gradient( 110% 50%, circle, rgb(8, 1, 1) 0%,#d487e9 110%,rgb(0, 7, 5));
-      background-image: radial-gradient( circle at 110% 50%, rgb(5, 0, 1) 0%,#d487e9 110%,rgb(10, 0, 0));
-    text-decoration: underline;
-    animation-name: pan-gradient;
-    animation-iteration-count: infinite;
-    animation-duration: 5s;
+  text-align: center;
+  font-weight: bold;
+   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-radial-gradient( 110% 50%, circle, rgb(8, 1, 1) 0%,#d487e9 110%,rgb(0, 7, 5));
+    background-image: radial-gradient( circle at 110% 50%, rgb(5, 0, 1) 0%,#d487e9 110%,rgb(10, 0, 0));
+  text-decoration: underline;
+  animation-name: pan-gradient;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
 }
-
 
 @-webkit-keyframes pan-gradient {
-
-0%   { 
-    
+  0%   {
     background-position: 0 0;
-}
-
-25% {
-   
+  }
+  25% {
     background-position: -1200px -1200px;
-}
-
-
-
-50% { 
-    
-     background-position: -1200px 1200px;
- 
-}
-
-
-100% { 
-    
-     background-position: 0 0;
- 
-}
-
+  }
+  50% {
+    background-position: -1200px 1200px;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 header {
@@ -222,23 +199,16 @@ header:after {
 
 h1 {
   color: #fff;
-  font-size: 50px;
-  font-weight: 400;
-  letter-spacing: 0.18em;
   text-transform: uppercase;
   margin: 0;
 }
 
 h2 {
   color: #fff;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 400;
   margin: 0 0 30px;
 }
 
 .nowplaying {
-  font-size: 120px;
   line-height: 1;
   color: #eee;
   text-shadow: 0 0 5rem #028ae9;
@@ -254,7 +224,7 @@ h2 {
   position: relative;
   margin: 0px auto 30px;
   cursor: none;
-  
+
 }
 
 .key {
@@ -271,7 +241,7 @@ h2 {
   float: left;
   width: 10%;
   height: 100%;
-  background: rgba(255, 255, 255, .8);    
+  background: rgba(255, 255, 255, .8);
 }
 
 .key.sharp {
@@ -301,15 +271,15 @@ h2 {
 }
 
 .key[data-key="85"] {
-  left: 57%;    
+  left: 57%;
 }
 
 .key[data-key="79"] {
-  left: 77%;    
+  left: 77%;
 }
 
 .key[data-key="80"] {
-  left: 87%;    
+  left: 87%;
 }
 
 .playing {
@@ -325,14 +295,13 @@ h2 {
   position: absolute;
   bottom: 7px;
   transition: opacity .3s ease-out;
-  font-size: 20px;
   z-index: 100;
 }
 
 .keys:hover .hints {
   opacity: 1;
 }
+
 .squig {
-   
     height: 80px;
-  }
+}
