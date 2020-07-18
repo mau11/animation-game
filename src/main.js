@@ -4,17 +4,22 @@ const keys = document.querySelectorAll(".key"),
 
 let played
 let allKeys = ['a','w','s','e','d','f','t','g','y','h','u','j','k','o','l','p',';']
+let playedTimes =[]
+let lastTime
 
 let addKeyDown = (e) => {
   if (e.key) {
     if (allKeys.includes(e.key.toLowerCase())) {
       played.push(e)
+      playedTimes.push(e.timeStamp)
     }
   }
 }
 
 let startRecording = () => {
   played = []
+  playedTimes = []
+  lastTime = 0
   window.addEventListener('keydown', addKeyDown)
 }
 
@@ -24,7 +29,13 @@ let stopRecording = (e) => {
 
 let playRecording = () => {
   for (let i = 0; i < played.length; i++) {
-    setTimeout(() => (playNote(played[i])), 1000 * i)
+    if (i) {
+      let time = playedTimes[i] - playedTimes[i - 1]
+      setTimeout(() => playNote(played[i]), time + lastTime)
+      lastTime = lastTime + time
+    } else {
+      playNote(played[i])
+    }
   }
 }
 
