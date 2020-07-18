@@ -2,6 +2,32 @@ const keys = document.querySelectorAll(".key"),
   note = document.querySelector(".nowplaying"),
   hints = document.querySelectorAll(".hints");
 
+let played
+let allKeys = ['a','w','s','e','d','f','t','g','y','h','u','j','k','o','l','p',';']
+
+let addKeyDown = (e) => {
+  if (e.key) {
+    if (allKeys.includes(e.key.toLowerCase())) {
+      played.push(e)
+    }
+  }
+}
+
+let startRecording = () => {
+  played = []
+  window.addEventListener('keydown', addKeyDown)
+}
+
+let stopRecording = (e) => {
+  window.removeEventListener('keydown', addKeyDown)
+}
+
+let playRecording = () => {
+  for (let i = 0; i < played.length; i++) {
+    setTimeout(() => (playNote(played[i])), 1000 * i)
+  }
+}
+
 function playNote(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
     key = document.querySelector(`.key[data-key="${e.keyCode}"]`);

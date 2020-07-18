@@ -9,11 +9,15 @@
 
 <body>
   <div class="container">
-    <h1 class="">Piano Player</h1>
-    <h3 class="">
-        Play KeyBoard by pressing (A S D F G H J K L ;)<br> and (W E T Y U O P)
-    </h3>
+    <h1 class="font-weight-light">Piano Player</h1>
+    <h6> Play the piano online using your keyboard
+      <hr />
+      <p>A S D F G H J K L ; and W E T Y U O P</p>
+    </h6>
     <canvas class="squig" resize></canvas>
+    <button class="btn btn-secondary mb-4" onclick="startRecording()">Record</button>
+    <button class="btn btn-secondary mb-4" onclick="stopRecording()">Stop Recording</button>
+    <button class="btn btn-secondary mb-4" onclick="playRecording()">Play</button>
     <section id="wrap">
       <section id="main">
         <div class="nowplaying"></div>
